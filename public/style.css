@@ -1,0 +1,29 @@
+.posts,.edit-box{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.posts h1{
+    color: #0b5dd8;
+    font-size: 3rem;
+}
+
+.post{
+    margin: 1rem 0.5rem;
+    outline: 2px solid rgb(92, 1, 197);
+    padding: 20px;
+}
+.post img{
+    width: 200px;
+}
+
+.links a{
+    text-decoration: none;
+    color: black;
+    margin-right: 5px;
+}
+.links a:hover{
+    text-decoration: underline;
+    color: #0b5dd8;
+}

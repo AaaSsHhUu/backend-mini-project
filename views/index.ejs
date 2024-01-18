@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="posts">
+        <h1>Petmania</h1>
+            <% for(post of posts){ %>
+                <div class="post">
+                    <h3 class="username">@<%= post.username %></h3>
+                    <img src="<%= post.image%>" />
+                    <p class="caption">caption : <%= post.caption %></p>
+                    <div class="links">
+                        <a href="/posts/<%= post.id %>">see details</a>
+                        <a href="/posts/<%= post.id %>/edit">Edit</a>
+                    </div>
+                    <form action="/posts/<%= post.id %>?_method=DELETE" method="post">
+                        <button>Delete Post</button>
+                    </form>
+                </div>
+            <% } %>
+    </div>
+    <a href="http://localhost:8080/posts/new">Add another post</a>
+  </body>
+</html>
